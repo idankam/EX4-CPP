@@ -4,9 +4,9 @@
 namespace coup{
     class Contessa : public Player{
         public:
-        Contessa(Game game,std::string name): Player(_game,_name){}
-        void block(const Assassin &assassin)override;
-        std::string role() const override;
+        Contessa(Game &game, const string &name): Player{game,name}{}
+        void block(Player &player)override;
+        std::string role() const override
         {
             return "Contessa";
         } 
